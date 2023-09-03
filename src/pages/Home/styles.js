@@ -19,13 +19,58 @@ export const Container = styled.div`
 
 export const Brand  = styled.div`
   grid-area: brand;
-  background: red;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+
+ > h1 {
+  font-size: 24px;
+  color: ${({ theme }) => theme.COLORS.ORANGE};
+    };
 `;
 
-export const Menu  = styled.ul``;
+export const Menu  = styled.ul`
+  grid-area: menu;
+  padding-top: 64px;
+  text-align: center;
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
-export const Search  = styled.div``;
+  > li {
+    margin-bottom: 24px;
+  }
+`;
 
-export const Content  = styled.div``;
+export const Search  = styled.div`
+  grid-area: search;
 
-export const NewNote = styled.button``;
+  padding: 64px 64px 0;  
+`;
+
+export const Content  = styled.div`
+  grid-area: content;
+  padding: 0 64px;
+  overflow-y: auto;
+`;
+
+export const NewNote = styled.button`
+  grid-area: newnote;
+
+  background-color: ${({ theme }) => theme.COLORS.ORANGE};
+
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > svg {
+    margin-right: 8px;
+  }
+`;
+    
